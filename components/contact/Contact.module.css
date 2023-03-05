@@ -1,5 +1,32 @@
-.contactWrapper {
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-self: baseline;
+  margin-top: 0px;
+  margin-right: 10px;
+  width: 50%;
 }
 
-.contact {
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px 10px 3px 10px;
+  font-size: var(--medFont);
+}
+
+.subLogo {
+  font-size: var(--smFont);
+}
+
+.title {
+  font-size: var(--smFont);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 10px;
+  underline: none;
 }

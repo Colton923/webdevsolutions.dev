@@ -1,11 +1,30 @@
-import styles from './Elevator.module.css'
-import { ElevatorProps } from '../../types/props'
+'use client'
 
-export default function Elevator(props: ElevatorProps) {
-  const { pitch } = { ...props }
+import styles from './Elevator.module.css'
+
+export default function Elevator() {
   return (
-    <div className={styles.elevator}>
-      <p className={styles.text}>{pitch}</p>
+    <div className={styles.content}>
+      <div className={styles.elevator}>
+        <p className={styles.text}>
+          <span style={{ fontWeight: '1000' }}>Websites and Web Apps</span>
+          <br />
+          <span className={styles.subtText}>
+            Providing small businesses automations, applications, or the simple
+            business card site for a one-time price.
+          </span>
+        </p>
+      </div>
+      <div className={styles.projects}>
+        <input
+          type="button"
+          value="My Projects"
+          className={styles.projText}
+          onClick={() => {
+            window.location.href = '/projects'
+          }}
+        />
+      </div>
     </div>
   )
 }

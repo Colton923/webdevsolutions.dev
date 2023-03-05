@@ -1,9 +1,63 @@
+.content {
+  display: flex;
+}
 .elevator {
+  display: flex;
+  background-image: rgba(135, 206, 235, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: 30%;
+  min-width: 300px;
+  height: 100%;
 }
 
 .text {
-  align-items: center;
+  position: relative;
+  font-size: var(--lrgFont);
+  color: #fff;
+  text-align: left;
+  z-index: 2;
+
+  opacity: 0;
+
+  margin: 10vh 10px 10px 5vw;
+  padding: 10px;
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.projects {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+
+  background-color: rgb(135, 206, 235, 0.2);
+  backdrop-filter: blur(3px);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.projText {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0);
+
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

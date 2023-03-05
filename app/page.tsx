@@ -1,23 +1,19 @@
-import styles from '../styles/App.module.css'
+import GetProps from '../utils/GetProps'
 import Background from '../components/background/Background'
 import Elevator from '../components/elevator/Elevator'
-import Contact from '../components/contact/Contact'
-import GetProps from '../utils/GetProps'
+import Header from '../components/header/Header'
+
 export default function Index() {
-  const props = GetProps()
-  const { BackgroundProps, ElevatorProps, ContactProps } = { ...props }
+  const width = 3218
+  const height = 1302
+  const props = GetProps({ width: width, height: height })
+  const { BackgroundProps } = { ...props }
 
   return (
-    <div className={styles.pageWrapper}>
-      <div className={styles.backgroundWrapper}>
-        <Background {...BackgroundProps} />
-      </div>
-      <div className={styles.elevatorWrapper}>
-        <Elevator {...ElevatorProps} />
-      </div>
-      <div className={styles.contactWrapper}>
-        <Contact {...ContactProps} />
-      </div>
-    </div>
+    <>
+      <Header />
+      <Background {...BackgroundProps} />
+      <Elevator />
+    </>
   )
 }

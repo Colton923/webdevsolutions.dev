@@ -1,23 +1,22 @@
 import * as Props from '../types/props'
-import background from '../public/images/fut.png'
+import background from '../public/images/background.jpg'
 
-const GetProps = () => {
+const GetProps = (props: Props.GetPropsProps) => {
+  const { width, height } = props
+
   const BackgroundProps: Props.BackgroundProps = {
     image: background,
-  }
-
-  const ElevatorProps: Props.ElevatorProps = {
-    pitch: 'Please pretty please let me work for you',
+    width: width,
+    height: height,
   }
 
   const ContactProps: Props.ContactProps = {
-    phoneNumber: '240-808-4635',
+    phoneNumber: '###-###-####',
     email: 'thewebdev@webdevsolutions.dev',
   }
 
   return {
     BackgroundProps,
-    ElevatorProps,
     ContactProps,
   }
 }

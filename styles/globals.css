@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,700;8..144,1000&display=swap');
 
 :root {
   --blue: #0d6efd;
@@ -10,6 +10,15 @@
   --black: #000;
   --white: #fff;
   --gray: #6c757d;
+
+  --smFont: 30px;
+  --medFont: 48px;
+  --lrgFont: 56px;
+
+  --mediaSm: 400px;
+  --mediaMd: 500px;
+  --mediaLg: 600px;
+  --mediaXl: 700px;
 }
 
 body {
@@ -20,4 +29,33 @@ body {
   color: var(--black);
   text-align: left;
   background-color: #fff;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --smFont: 24px;
+    --medFont: 42px;
+    --lrgFont: 50px;
+  }
+}
+@media (max-width: 600px) {
+  :root {
+    --smFont: 20px;
+    --medFont: 36px;
+    --lrgFont: 44px;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --smFont: 18px;
+    --medFont: 28px;
+    --lrgFont: 36px;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --smFont: 13px;
+    --medFont: 20px;
+    --lrgFont: 26px;
+  }
 }
