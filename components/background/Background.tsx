@@ -14,8 +14,22 @@ export default function Background(props: BackgroundProps) {
   const [backgroundHeight, setBackgroundHeight] = useState(0)
   const [backgroundWidth, setBackgroundWidth] = useState(0)
   const [poppedCount, setPoppedCount] = useState(0)
-  const wrapper = document.getElementById('wrapper')
-  const currentPop = document.getElementById('popcount')
+  const [wrapper, setWrapper] = useState<HTMLDivElement | null>(null)
+  const [currentPop, setCurrentPop] = useState<HTMLParagraphElement | null>(null)
+
+  useEffect(() => {
+    const wrapper = document.getElementById('wrapper')
+    const currentPop = document.getElementById('popcount')
+    if (wrapper) {
+      // @ts-ignore
+      setWrapper(wrapper)
+    }
+    if (currentPop) {
+      // @ts-ignore
+      setCurrentPop(currentPop)
+    }
+  }, [])
+
   const stackList = [
     'Next JS',
     'React JS',
