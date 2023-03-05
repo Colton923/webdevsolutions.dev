@@ -15,7 +15,7 @@ export default function Elevator() {
           </span>
         </p>
       </div>
-      <div className={styles.projects}>
+      {/* <div className={styles.projects}>
         <input
           type="button"
           value="My Projects"
@@ -24,7 +24,7 @@ export default function Elevator() {
             window.location.href = '/projects'
           }}
         />
-      </div>
+      </div> */}
     </div>
   )
 }
