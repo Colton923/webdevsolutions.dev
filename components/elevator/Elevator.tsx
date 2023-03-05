@@ -9,7 +9,7 @@ export default function Elevator() {
         <p className={styles.text}>
           <span style={{ fontWeight: '1000' }}>Websites and Web Apps</span>
           <br />
-          <span className={styles.subtText}>
+          <span className={styles.subText}>
             Providing small businesses automations, applications, or the simple
             business card site for a one-time price.
           </span>
